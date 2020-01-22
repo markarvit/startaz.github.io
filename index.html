@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base target="_parent">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+  <title> Buy Hollywood Smile | Give yourself the gift of a
+    perfect smile!</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="css/form.css" />
+  <script src="js/timer.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script src="js/popup.min.js"></script>
+  <style>
+    #popUp {
+      position: fixed;
+      bottom: 10px;
+      right: 50px;
+      max-width: 300px;
+      padding: 20px;
+      font-size: 16px;
+      box-shadow: 1px 1px 5px #999;
+      /*opacity: 0;*/
+      font-weight: 100;
+      background-color: rgba(0, 0, 0, 0.70);
+      z-index: 999999999999999999;
+      color: white;
+      display: none;
+    }
+
+    .formBox.b {
+      background: red !important;
+    }
+
+    .button {
+      background-color: #3e9dea;
+    }
+
+    .button:hover {
+      background-color: #3e9dea;
+    }
+
+    @media screen and (max-width: 659px) {
+      .w-100-small {
+        width: 100px;
+      }
+    }
+
+    .input-area {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  </style>
+  <script type="text/javascript" src="js/template_validatorID.js"></script>
+  <script type="text/javascript" src="js/jquery.zip.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#shipping_phone1").mask("09999999999");
+      $("#shipping_phone1").mask("099999998888");
+      var phoneValue = $("#shipping_phone1");
+
+      $("#shipping_phone1").on("keyup", function () {
+        if (phoneValue.val().substring(1, 2) == "0") {
+          $("#shipping_phone1").mask("099999998888");
+
+        }
+      });
+
+      $("#shipping_phone2").mask("099999998888");
+      var phoneValue1 = $("#shipping_phone2");
+      $("#shipping_phone2").on("keyup", function () {
+        if (phoneValue1.val().substring(1, 2) == "0") {
+          $("#shipping_phone2").mask("099999998888");
+        }
+      });
+
+      $("#shipping_phone3").mask("099999998888");
+      var phoneValue2 = $("#shipping_phone3");
+      $("#shipping_phone2").on("keyup", function () {
+        if (phoneValue2.val().substring(1, 2) == "0") {
+          $("#shipping_phone3").mask("099999998888");
+        }
+      });
+    });
+  </script>
+<script type="text/javascript" src="script_land.js" defer></script></head>
+
+<body oncontextmenu="return false" ondragstart="return false;" ondrop="return false;">
+  <div class="out">
+
+    <section class="head-block-v1">
+      <div class="bl1-bg">
+        <div class="wrap">
+          <div class="title">
+            <img class="logo-img" src="img/logo.png" alt="">
+            <h1 style="color: black;font-size:28px"><span> Give yourself the gift of a <br>perfect smile! </span></h1>
+          </div>
+          <div class="clearfix"></div>
+          <div class="elem">
+            <ul class="list-type-v1">
+              <li> Easy to use and comfortable veneers </li>
+              <li> One size fits all </li>
+              <li> Snaps-on securely </li>
+            </ul>
+            <div class="prod-img order-1" style="margin-top:50px;">
+              <img class="sale-badge" src="img/sale.png" alt="">
+              <img src="img/product.png" alt="">
+            </div>
+          </div>
+          <div class="iframe-parent">
+            <div class="formBox b">
+              <h3>Hot deal! 50% Discount!</h3>
+              <div class="box">
+                <div class="count">
+                  <h4>TIME UNTIL HOT DEAL ENDS:</h4>
+                  <a class="countbox" href="#form-index2">
+                    <div class="countdown_box">
+                      <p id="hours"></p><span>:</span>
+                      <p id="minutes"></p><span>:</span>
+                      <p id="seconds"></p>
+                    </div>
+                    <div class="time">
+                      <span>Hour</span>
+                      <span>Mins</span>
+                      <span>Secs</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="prices">
+                  <p> Old Price <span class="red al-cost-promo">₱</span></p>
+                  <p> Price <span class="green al-cost">₱</span></p>
+                </div>
+                <form name="form-index" id="form-index1" class="orderform al-form" action="/land/order" method="post">
+                  <select class="al-country" name="country" style="display: none;"></select>
+
+                  <div><input id="shipping_fname1" type="text" name="name" placeholder="First Name & Last Name" value="" /></div>
+                  <div class="input-area"><input id="shipping_areacode" type="text" disabled="disabled" value="+63" name="areacode"><input id="shipping_phone1" type="text" name="phone" placeholder="Mobile Number" value="" /></div>
+
+                  <button class="button" type="submit" onclick="return template_validator({'shipping_fname1':{'mask':/\S/,'hint':'Enter first name and last name!'},'shipping_phone1':{'mask':/^[0-9]{8,12}$/,'hint':'Enter a valid Telephone number.'}})">rush my order</button>
+                  <br class="clear" />
+                </form>
+
+                <img class="w-100-small" src="img/satisfaction.png" alt="">
+                <img class="w-100-small" src="img/shipping.png" alt="">
+              </div>
+              <p class="additional">98% of customers confirm effectivity!</p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="problem">
+      <div class="wrap-nopad">
+        <h2 class="lvl-title-v1"><b> Hollywood Smile </b> –are <b> 2 in 1 </b> : aligners and veneers! </h2>
+        <ul class="list-type-v2 list--square">
+          <li> <img src="img/pr1.jpeg" alt="" class="list-img">
+            <div class="list-cont">
+              <p> Camouflage crooked or severely gapped teeth </p>
+            </div>
+          </li>
+          <li> <img src="img/pr2.jpeg" alt="" class="list-img">
+            <div class="list-cont">
+              <p> Hide one or multiple missing teeth, chipped teeth </p>
+            </div>
+          </li>
+          <li> <img src="img/pr3.jpeg" alt="" class="list-img">
+            <div class="list-cont">
+              <p> Help conceal darkened or discolored teeth </p>
+            </div>
+          </li>
+          <li> <img src="img/pr4.jpg" alt="" class="list-img">
+            <div class="list-cont">
+              <p> Straighten the teeth and fix your bite </p>
+            </div>
+          </li>
+        </ul>
+        <h2 class="lvl-title-v1"> You can say goodbye to these problems <b> for good! </b></h2>
+        <br>
+        <div class="container clearfix">
+          <div class="cleft"> <img src="img/photo1.jpg" alt="" class="photo1"></div>
+          <div class="cright">
+            <p>Broken, crooked, or missing front teeth do nothing for your looks and repel other people. This is why we smile as little as possible and not show our front teeth.</p>
+            <div class="gifbox"><img src="img/pic.png" alt=""></div>
+          </div>
+        </div>
+        <div class="container clearfix vidos">
+          <div class="cleft">
+            <p><b> HOLLYWOOD SMILE – is a unique device that gives you an irresistible smile. </b>With its help you can stop being embarrassed of your teeth and start smiling as often as you like.</p>
+            <p><b> Everyone will love your new smile! </b></p>
+          </div>
+          <div class="cright">
+            <div class="video-frame">
+              <img src="img/123.jpeg" alt="">
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <section class="problem pat">
+      <div class="wrap-nopad">
+        <h2 class="lvl-title-v1"> What is <b> Hollywood Smile? </b></h2>
+        <br>
+        <div class="container clearfix">
+          <div class="cleft"> <img style="max-width: inherit;width: 450px;" src="img/product.png" alt="" class="photo1"></div>
+          <div class="cright">
+            <p><b> Hollywood Smile </b> – are high-quality and comfortable removable veneers that are easy to use and suitable for anyone. They have a bridge-like construction that adjusts to your natural teeth without causing any abrasive effects. </p>
+            <br class="mob-hidden">
+            <ul class="list-type-v2 list--square ba dt-hidden">
+              <li> <img class="list-img" src="img/ba1.jpg" alt=""></li>
+              <li> <img class="list-img" src="img/ba2.jpg" alt=""></li>
+              <li> <img class="list-img" src="img/ba3.jpg" alt=""></li>
+            </ul>
+            <p> They are made out of a thin but durable and lasting material insusceptible to staining by substances such as coffee, tea or cigarette smoke. HOLLYWOOD SMILE can be used both on a long-term (years!) as well as a short-term basis, as a simple and comfortable device to replace the look of teeth temporarily during denture or implant procedures.</p>
+          </div>
+        </div>
+        <ul class="list-type-v2 list--square ba mob-hidden">
+          <li> <img class="list-img" src="img/ba1.jpg" alt=""></li>
+          <li> <img class="list-img" src="img/ba2.jpg" alt=""></li>
+          <li> <img class="list-img" src="img/ba3.jpg" alt=""></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="use-block-v1">
+      <div class="wrap-nopad">
+        <h2 class="lvl-title-v1"> How do they make <b> Hollywood Smile? </b></h2>
+        <div class="container clearfix">
+          <div class="cleft">
+            <img width="450px" src="img/tech.jpg" alt="" class="photo1">
+          </div>
+          <div class="cright">
+            <p style="margin-bottom:15px;"> It is the only system in the world, manufactured at a factory using high-tech equipment and innovative technologies, whereas many other types of veneers are made by hand at basic dental laboratories. </p>
+            <p> Thanks to an automated manufacturing process and the use of unique materials, <b> veneers-aligners Hollywood Smile </b> are not only aesthetic and comfortable to wear, but they offer the same efficacy as braces. </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="">
+      <div class="wrap">
+        <h2 class="lvl-title-v1"> Instant smile with Hollywood Smile! It fits your natural teeth like a glove. </h2>
+        <div class="middle-flex">
+          <div class="m-bullets">
+            <ul class="list-type-v1">
+              <li> They attach painlessly and without filing down your teeth </li>
+              <li> Hypoallergenic material and adhesive </li>
+              <li> Ideally white and straight teeth </li>
+              <li> Securely attached 24/7 </li>
+              <li> One size fits all </li>
+            </ul>
+          </div>
+          <div class="m-prodimg">
+            <img class="sale-badge" src="img/sale.png" alt="">
+            <img style="max-width: inherit;width:540px;" src="img/product.png" alt="">
+          </div>
+          <div class="m-salebox">
+            <div class="iframe-parent">
+              <div class="formBox b">
+                <h3>Hot deal! 50% Discount!</h3>
+                <div class="box">
+                  <div class="count">
+                    <h4>TIME UNTIL HOT DEAL ENDS:</h4>
+                    <a class="countbox" href="#form-index2">
+                      <div class="countdown_box">
+                        <p id="hours1"></p><span>:</span>
+                        <p id="minutes1"></p><span>:</span>
+                        <p id="seconds1"></p>
+                      </div>
+                      <div class="time">
+                        <span>Hour</span>
+                        <span>Mins</span>
+                        <span>Secs</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="prices">
+                    <p> Old Price <span class="red al-cost-promo">₱</span></p>
+                    <p> Price <span class="green al-cost">₱</span></p>
+                  </div>
+                  <form name="form-index" id="form-index1" class="orderform al-form" action="/land/order" method="post">
+                    <select class="al-country" name="country" style="display: none;"></select>
+
+                    <div><input id="shipping_fname2" type="text" name="name" placeholder="First Name & Last Name" value="" /></div>
+                    <div class="input-area"><input id="shipping_areacode" type="text" disabled="disabled" value="+63" name="areacode"><input id="shipping_phone2" type="text" name="phone" placeholder="Mobile Number" value="" /></div>
+
+                    <button class="button" type="submit" onclick="return template_validator({'shipping_fname2':{'mask':/\S/,'hint':'Enter first name and last name!'},'shipping_phone2':{'mask':/^[0-9]{8,12}$/,'hint':'Enter a valid Telephone number.'}})">rush my order</button>
+                    <br class="clear" />
+                  </form>
+
+                  <img class="w-100-small" src="img/satisfaction.png" alt="">
+                  <img class="w-100-small" src="img/shipping.png" alt="">
+                </div>
+                <p class="additional">98% of customers confirm effectivity!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="create pat">
+      <div class="wrap">
+        <h2 class="lvl-title-v1"> Hollywood Smile is created <br>
+          <b> specifically for you </b></h2>
+        <div class="container clearfix create-img"> <img src="img/photo2.jpeg" alt="">
+          <p> DUMMY are simple and comfortable removable veneers suitable for anyone. They are so comfortable that just 10 minutes after you put them in, you will not even notice them. No one will ever guess that these are veneers and not just your natural beautiful teeth. . </p>
+          <p> DUMMY does not require your teeth to be filed down and do not harm your enamel or gums. They are manufactured out of super-durable and super-thin medical polypropylene. This is a highly durable material that does not lose its attractiveness or durability for decades to come. </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="use-block-v1">
+      <div class="wrap-nopad">
+        <h2 class="lvl-title-v1"> These veneers are very <b> easy to use! </b></h2>
+        <p> Just 3 simple steps will make your smile irresistible! </p>
+        <ul class="list-type-v2 list--square">
+          <li> <img class="list-img" src="img/u1.jpeg" alt="">
+            <div class="list-cont">
+              <p> Submerge the veneers into hot water for 2 minutes </p>
+            </div>
+          </li>
+          <li> <img class="list-img" src="img/u2.jpeg" alt="">
+            <div class="list-cont">
+              <p> Press tightly to the outside of your teeth </p>
+            </div>
+          </li>
+          <li> <img class="list-img" src="img/u3.jpeg" alt="">
+            <div class="list-cont">
+              <p> Smile as much as you want – a beautiful smile looks good on everyone! </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="rev-block-v3 pat">
+      <div class="wrap-nopad">
+        <h2 class="lvl-title-v1"> Feedback from our <b> customers </b></h2>
+        <div class="container clearfix">
+          <div class="rev-item clearfix"> <img class="rev-img" src="img/rev1.jpeg" alt="">
+            <div class="rev-cont">
+              <h4> Joseph Devera, 26 years old </h4>
+              <p> “I had yellow and crooked teeth that actually I was fine with, but my wife wasn’t. Then she found Hollywood Smile veneers, bought them for herself and wore them, then ordered me some of the same ones. I’ll be frank, I didn’t want to wear them. But when I tried them, I was surprised. They are very comfortable, they adhere securely and my teeth looked perfect. Now I always keep them on hand for special occasions.” </p>
+            </div>
+          </div>
+          <div class="rev-item clearfix"> <img class="rev-img" src="img/rev2.jpg" alt="">
+            <div class="rev-cont">
+              <h4> Gerald Tolentino, 38 years old </h4>
+              <p>“I have a big gap between my two front teeth which isn’t very attractive and I’ve always dreamed of covering it up somehow. I saw a commercial, ordered Hollywood Smile veneers and made my dream come true! My teeth are completely covered by this little strip, looks very natural and beautiful! Teeth immediately look white and straight, just what I needed! Buy them, you won’t regret it!”</p>
+            </div>
+          </div>
+          <div class="rev-item clearfix"> <img class="rev-img" src="img/rev3.jpeg" alt="">
+            <div class="rev-cont">
+              <h4> Rhikka Lumang, 30 years old </h4>
+              <p> “I got myself some Hollywood Smile because everyone seems to be buying them. My teeth, to put it mildly, aren’t in great shape. So, I thought, I’ll give it a shot. These veneers completely justified all of my expectations. Now I can smile without being embarrassed of my teeth. They are virtually indistinguishable from real teeth. I highly recommend these to everyone whose front teeth are in bad shape!”</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="delivery-block-v3">
+      <div class="wrap-nopad">
+        <h2 class="lvl-title-v1"> How to order <b> Hollywood Smile veneers? </b></h2>
+        <ul class="list-type-v2 list--circle">
+          <li>
+            <div class="list-img"> <img src="img/delivery-block-v3_1.png" alt=""></div>
+            <div class="list-cont">
+              <h4> Order </h4>
+              <p> Fill out the order form <br> on our website </p>
+            </div>
+          </li>
+
+          <li>
+            <div class="list-img"> <img src="img/delivery-block-v3_3.png" alt=""></div>
+            <div class="list-cont">
+              <h4> Shipping </h4>
+              <p> The order will be shipped for free <br>if it is more than 1999 PHP <br> in 1-5 business days </p>
+            </div>
+          </li>
+          <li>
+            <div class="list-img"> <img src="img/delivery-block-v3_4.png" alt=""></div>
+            <div class="list-cont">
+              <h4> Delivery </h4>
+              <p> Pay when <br>
+                you receive your package </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="head-block-v1">
+      <div class="bl1-bg">
+        <div class="wrap">
+          <div class="title">
+            <img class="logo-img" src="img/logo.png" alt="">
+            <h1 style="color: black;font-size:28px"><span> Give yourself the gift of a<br>perfect smile! </span></h1>
+          </div>
+          <div class="clearfix"></div>
+          <div class="elem">
+            <ul class="list-type-v1">
+              <li> Easy to use and comfortable veneers </li>
+              <li> One size fits all </li>
+              <li> Snaps-on securely </li>
+            </ul>
+            <div class="prod-img order-1" style="margin-top:50px;">
+              <img class="sale-badge" src="img/sale.png" alt="">
+              <img src="img/product.png" alt="">
+            </div>
+          </div>
+          <div class="iframe-parent">
+            <div class="formBox b">
+              <h3>Hot deal! 50% Discount!</h3>
+              <div class="box">
+                <div class="count">
+                  <h4>TIME UNTIL HOT DEAL ENDS:</h4>
+                  <a class="countbox" href="#form-index2">
+                    <div class="countdown_box">
+                      <p id="hours2"></p><span>:</span>
+                      <p id="minutes2"></p><span>:</span>
+                      <p id="seconds2"></p>
+                    </div>
+                    <div class="time">
+                      <span>Hour</span>
+                      <span>Mins</span>
+                      <span>Secs</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="prices">
+                  <p> Old Price <span class="red al-cost-promo">₱</span></p>
+                  <p> Price <span class="green al-cost">₱</span></p>
+                </div>
+                <form name="form-index" id="form-index1" class="orderform al-form" action="/land/order" method="post">
+                  <select class="al-country" name="country" style="display: none;"></select>
+
+                  <div><input id="shipping_fname3" type="text" name="name" placeholder="First Name & Last Name" value="" /></div>
+                  <div class="input-area"><input id="shipping_areacode" type="text" disabled="disabled" value="+63" name="areacode"><input id="shipping_phone3" type="text" name="phone" placeholder="Mobile Number" value="" /></div>
+
+                  <button class="button" type="submit" onclick="return template_validator({'shipping_fname3':{'mask':/\S/,'hint':'Enter first name and last name!'},'shipping_phone3':{'mask':/^[0-9]{8,12}$/,'hint':'Enter a valid Telephone number.'}})">rush my order</button>
+                  <br class="clear" />
+                </form>
+
+                <img class="w-100-small" src="img/satisfaction.png" alt="">
+                <img class="w-100-small" src="img/shipping.png" alt="">
+              </div>
+              <p class="additional">98% of customers confirm effectivity!</p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+
+</html>
